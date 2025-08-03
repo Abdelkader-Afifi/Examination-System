@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">📚</div>
+                    <div>
+                        <h1>EduDash</h1>
+                        <p>Student Portal</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a routerLink="/student/dashboard" routerLinkActive="active" class="nav-item">
+                    <span class="nav-icon">🏠</span>
+                    <span>Dashboard</span>
+                </a>
+                <a routerLink="/student/exams" routerLinkActive="active" class="nav-item">
+                    <span class="nav-icon">📝</span>
+                    <span>Exams</span>
+                </a>
+                <a routerLink="/student/results" routerLinkActive="active" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Results</span>
+                </a>
+                    <div class="mt-auto p-3">
+      <hr class="my-3 opacity-25">
+      <button (click)="logout()"
+              class="btn btn-link nav-item nav-link text-white d-flex align-items-center px-3 py-3 rounded-2 text-decoration-none w-100 text-start border-0"
+              style="transition: all 0.3s ease; background: none;">
+        <i class="nav-icon fas fa-sign-out-alt me-3" style="width: 20px; text-align: center;"></i>
+        <span>Logout</span>
+      </button>
+    </div>
+            </nav>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- <div class="header">
+                <h2 id="page-title">Dashboard</h2>
+                <p id="page-subtitle">Welcome back, Sarah! Here's your academic overview</p>
+            </div> -->
+
+            <div class="content">
+                <router-outlet>
+
+                </router-outlet>
+            </div> <!-- End of .content -->
+        </div> <!-- End of .main-content -->
+    </div>
+
+    <!-- JavaScript to switch sections -->
+</body>
+
+</html>

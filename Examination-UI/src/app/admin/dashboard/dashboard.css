@@ -1,0 +1,124 @@
+@media (max-width: 991.98px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.translate-none {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sidebar {
+    width: 100% !important;
+  }
+
+  .content {
+    margin: 0.5rem !important;
+    padding: 1rem !important;
+  }
+}
+
+/* Navigation Hover Effects */
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+  border-left-color: #3498db !important;
+}
+
+.nav-item.active {
+  background: linear-gradient(45deg, rgba(52, 152, 219, 0.2), rgba(46, 204, 113, 0.2)) !important;
+  border-left-color: #2ecc71 !important;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Logout Button Hover */
+.btn-link:hover {
+  background: rgba(231, 76, 60, 0.2) !important;
+  color: #ff6b6b !important;
+}
+
+/* Sidebar Gradient Background */
+.sidebar {
+  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%) !important;
+}
+
+/* Mobile Menu Button Hover */
+.mobile-menu-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth Animations */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Focus States for Accessibility */
+.nav-item:focus,
+.mobile-menu-btn:focus,
+.btn-link:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animation for content */
+.content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .sidebar {
+    background: #000 !important;
+    border-right: 2px solid #fff;
+  }
+
+  .nav-item {
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
